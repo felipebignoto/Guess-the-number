@@ -135,7 +135,7 @@ div#containt.darkmode-containt{
     border-color: var(--gray);
 }
 
-div.options #button .darkmode-button{
+div #button.darkmode-button{
     background-color: var(--gray);
     color: white;
 }

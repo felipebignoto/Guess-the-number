@@ -46,5 +46,9 @@ document
     .addEventListener("click",function(){
         document.querySelector("#containt").classList.toggle('darkmode-containt')
         document.querySelector("body").classList.toggle('darkmode')
-        document.querySelector("#button").classList.toggle('darkmode-button')
+        const buttons = document.querySelectorAll(".options button")
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].classList.toggle('darkmode-button')
+        }
+        
     })
