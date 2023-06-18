@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!--NOVAS FUNCIONALIDADES
+1-PORTUGUES E INGLES
+2-MODO CLARO E ESCURO
+3-ESCOLHER O NUMERO MAXIMO
+-->
+
+<body onload="init()">
+
+    <div class="options">
+        <div class="language">
+            <button id="submit" class="portuguese">Portuguese</button>
+            <button id="submit" class="english">English</button>
+        </div>
+
+        <div class="modo">
+            <button id="submit" class="light">Light</button>
+            <button id="submit" class="dark">Dark</button>
+        </div>
+    </div>
+
+    <div id="containt">
+
+        <div class="first">
+            <h1>Guess the number</h1>
+            <div class="max">
+                <label for="splitInput">Max:</label>
+                <input type="range" min="1" max="1000" value="1" id="max" class="range" />
+                <span class="maxValue">1</span>
+            </div>
+
+            <h2><span id="your-guess">Your Guess:</span></h2>
+            <br>
+            <input type="number" id="number" placeholder="-" onchange="compareNumber()">
+        </div>
+
+        <div class="second">
+            <div class="second-left">
+                <p>Number of attempts:</p>
+                <span id="attempts">-</span>
+            </div>
+            <div class="second-right">
+                <p>Your guesses:</p>
+                <span id="guesses">-</span>
+            </div>
+        </div>
+
+        <div class="button">
+            <button id="submit" onclick="newGame()">New game</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

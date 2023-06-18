@@ -1,0 +1,124 @@
+*{
+    padding: 0;
+}
+
+body{
+    background-color: rgb(75, 163, 104);
+}
+
+h1{
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+#containt{
+    height: 500px;
+    width: 450px;
+
+    margin-left: auto;
+    margin-right: auto;
+    
+    display: block;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    background-color:rgb(50, 161, 67) ;
+
+    border: 8px solid #ffffff;
+    border-radius: 40px;
+
+    color: white;
+}
+
+.first{
+    text-align: center;
+}
+
+.first input{
+    height: 40px;
+    width: 250px;
+    text-align: center;
+}
+
+.second {
+    margin-top: 25px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.second-left , .second-right{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid white;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.second span{
+    align-items: center;
+    display: flex;
+}
+
+.button{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.button button{
+    margin: 20px;
+    width: 130px;
+    height: 60px;
+    background-color: rgba(113, 112, 112,0.2);
+    color: rgb(0, 0, 0);
+    border: 3px solid black;
+    border-radius: 20px;
+    font-size: 20px;
+    
+}
+
+.button button:hover{
+    background-color: rgb(25, 91, 47);
+    color: rgb(41, 41, 41);
+    font-weight: bold;
+    color: white;
+}
+
+.options{
+    z-index: 5;
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.language{
+    margin-left: 20px;
+}
+
+.modo{
+    margin-right: 20px;
+}
+
+.options button{
+    width: 90px;
+    height: 50px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 8px;
+    background-color: rgb(72, 72, 72);
+    color: aliceblue;
+    text-transform: uppercase;
+}
+
+.max {
+    display: flex;
+    justify-content: space-evenly;
+    align-self: center;
+}
+
+.max label, .max input{
+    align-self: center;
+}
+
