@@ -1,11 +1,11 @@
 let computerNumber;
 let userNumbers = [];
 
+
 function compareNumber() {
     let userNumber = Number(document.getElementById('number').value)
     userNumbers.push(" " + userNumber)
     document.getElementById('guesses').innerHTML = userNumbers
-
     if (userNumbers.length <= 10) {
         if (userNumber > computerNumber) {
             document.getElementById("your-guess").innerHTML = "Your number is too high!"
@@ -39,3 +39,12 @@ function init() {
 function newGame() {
     window.location.reload()
 }
+
+
+document
+    .querySelector(".dark")
+    .addEventListener("click",function(){
+        document.querySelector("#containt").classList.toggle('darkmode-containt')
+        document.querySelector("body").classList.toggle('darkmode')
+        document.querySelector("#button").classList.toggle('darkmode-button')
+    })

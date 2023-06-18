@@ -11,33 +11,25 @@
 <!--NOVAS FUNCIONALIDADES
 1-PORTUGUES E INGLES
 2-MODO CLARO E ESCURO
-3-ESCOLHER O NUMERO MAXIMO
 -->
 
 <body onload="init()">
 
     <div class="options">
         <div class="language">
-            <button id="submit" class="portuguese">Portuguese</button>
-            <button id="submit" class="english">English</button>
+            <button id="button" class="portuguese" onclick="">Portuguese</button>
+            <button id="button" class="english" onclick="">English</button>
         </div>
 
         <div class="modo">
-            <button id="submit" class="light">Light</button>
-            <button id="submit" class="dark">Dark</button>
+            <button id="button" class="dark">Dark / Light</button>
         </div>
     </div>
 
     <div id="containt">
 
         <div class="first">
-            <h1>Guess the number</h1>
-            <div class="max">
-                <label for="splitInput">Max:</label>
-                <input type="range" min="1" max="1000" value="1" id="max" class="range" />
-                <span class="maxValue">1</span>
-            </div>
-
+            <h1>Guess the number <br>1 - 100</h1>
             <h2><span id="your-guess">Your Guess:</span></h2>
             <br>
             <input type="number" id="number" placeholder="-" onchange="compareNumber()">
