@@ -22,6 +22,8 @@ h1{
     height: 500px;
     width: 450px;
 
+    margin-top: 20px;
+
     margin-left: auto;
     margin-right: auto;
     
@@ -151,4 +153,24 @@ div #button.darkmode-button{
 div.button button#submit.darkmode-newGame:hover{
     border: 5px solid var(--gray);
     background-color: rgb(0, 0, 0);
+}
+
+@media(max-width: 516px){
+    body{
+        font-size: 70%;
+    }
+
+    .first input{
+        width: 60vw;
+    }
+
+    #containt{
+        width: 80%;
+        
+    }
+
+    .language, .modo{
+       margin-left: auto;
+       margin-right: auto;
+    }
 }
