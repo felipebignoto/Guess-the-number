@@ -86,6 +86,7 @@ h1{
     border: 3px solid black;
     border-radius: 20px;
     font-size: 20px;
+    cursor: pointer;
     
 }
 
@@ -119,6 +120,7 @@ h1{
     color: black;
     text-transform: uppercase;
     font-size: 15px;
+    cursor: pointer;
 }
 
 .options button:hover{
@@ -153,6 +155,10 @@ div #button.darkmode-button{
 div.button button#submit.darkmode-newGame:hover{
     border: 5px solid var(--gray);
     background-color: rgb(0, 0, 0);
+}
+
+.underline{
+   box-shadow: 4px 4px rgb(234, 255, 0);
 }
 
 @media(max-width: 516px){

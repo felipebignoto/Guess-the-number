@@ -59,6 +59,7 @@ function compareNumber() {
 function init() {
     document.getElementById("number").value = ""
     computerNumber = Math.floor(Math.random() * 100 + 1)
+    document.querySelector("#button").classList.toggle('underline')
 
 }
 
@@ -87,7 +88,7 @@ document
 
     })
 
-//Botão de modo de cor
+//Botão para idioma portugues
 document
     .querySelector(".portuguese")
     .addEventListener("click", function () {
@@ -109,8 +110,13 @@ document
             console.log(tip)
             document.getElementById("your-guess").innerHTML = "Seu número é alto!"
         }
-    })
 
+        document.querySelector(".portuguese").classList.add('underline')
+        document.querySelector(".english").classList.remove('underline')
+
+
+    })
+//botao para idioma ingles
 document
     .querySelector(".english")
     .addEventListener("click", function () {
@@ -132,4 +138,8 @@ document
             console.log(tip)
             document.getElementById("your-guess").innerHTML = "Your number is too high!"
         }
+
+        document.querySelector(".portuguese").classList.remove('underline')
+        document.querySelector(".english").classList.add('underline')
     })
+
