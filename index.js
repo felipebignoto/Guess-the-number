@@ -1,7 +1,7 @@
 let computerNumber;
 let userNumbers = [];
 let english = true;
-
+document.querySelector(".english").classList.add('underline')
 
 function compareNumber() {
     let userNumber = Number(document.getElementById('number').value)
@@ -57,14 +57,32 @@ function compareNumber() {
 }
 
 function init() {
+    
+    //limpando campos
+    document.getElementById('guesses').innerHTML = ""
+    document.getElementById("attempts").innerHTML = ""
+    if(english){
+        document.getElementById("your-guess").innerHTML = "Your guess:"
+    }
+    else{
+        document.getElementById("your-guess").innerHTML = "Sua tentativa:"
+    }
+
+
+    userNumbers = [];
+
+
+
     document.getElementById("number").value = ""
     computerNumber = Math.floor(Math.random() * 100 + 1)
-    document.querySelector("#button").classList.toggle('underline')
+    
+    document.getElementById("number").removeAttribute("readOnly")
+
 
 }
 
 function newGame() {
-    window.location.reload()
+   init();
 }
 
 //Botão de modo de cor
@@ -103,13 +121,15 @@ document
         document.querySelector("#submit").innerHTML = "Novo jogo"
 
         if (tip == "Your number is too low!") {
-            console.log(tip)
             document.getElementById("your-guess").innerHTML = "Seu número é baixo!"
         }
         else if (tip == "Your number is too high!") {
-            console.log(tip)
             document.getElementById("your-guess").innerHTML = "Seu número é alto!"
         }
+        else if (tip == "You Win!") {
+            document.getElementById("your-guess").innerHTML = "Você ganhou!"
+        }
+       
 
         document.querySelector(".portuguese").classList.add('underline')
         document.querySelector(".english").classList.remove('underline')
@@ -131,12 +151,13 @@ document
         document.querySelector("#submit").innerHTML = "New game"
 
         if (tip == "Seu número é baixo!") {
-            console.log(tip)
             document.getElementById("your-guess").innerHTML = "Your number is too low!"
         }
         else if (tip == "Seu número é alto!") {
-            console.log(tip)
             document.getElementById("your-guess").innerHTML = "Your number is too high!"
+        }
+        else if (tip == "Você ganhou!") {
+            document.getElementById("your-guess").innerHTML = "You Win!"
         }
 
         document.querySelector(".portuguese").classList.remove('underline')
